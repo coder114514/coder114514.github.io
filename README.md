@@ -4,7 +4,6 @@
 
 ## 目录
 
-1. [About](about.md)
-2. [Features](features.md)
-3. [Limitations](limitations.md)
-4. [What about a Wiki?](wiki.md)
+1. [memset和整数数据范围](memset.md)
+1. [Floyd和倍增Floyd](Floyd.md)
+1. [Dijkstra最短路](Dijkstra.md)
