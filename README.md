@@ -1,13 +1,7 @@
 # 个人网站
 
 ## 笔记
-线段树端点值如果要处理负数，那么mid应该取(l+r-1)/2
 
-if l=-2,r=-1,
-
-(l+r-1)/2=-2
-
-(l+r)/2=-1 <---- 死循环
 
 ## 目录
 
@@ -15,3 +9,4 @@ if l=-2,r=-1,
 1. [Floyd和倍增Floyd](Floyd.md)
 1. [Dijkstra最短路](Dijkstra.md)
 1. [Git笔记](Git.txt)
+1. [线段树技巧](segtree.md)
