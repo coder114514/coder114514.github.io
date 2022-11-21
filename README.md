@@ -1,8 +1,5 @@
 # 个人网站
 
-## 笔记
-
-
 ## 目录
 
 1. [memset和整数数据范围](posts/memset.md)
