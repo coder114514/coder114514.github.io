@@ -6,7 +6,7 @@ e.g.
 
 如果 $$ l=-2 $$, $$ r=-1 $$
 
-1. $$ \left[ \frac{l+r-1}{2} \right] = -2 $$
-1. $$ \left[ \frac{l+r}{2} \right] = -1 $$ <---- 死循环
+1. $$ \left[ \frac{l+r-1}{2} \right] = -2 $$ 正常
+1. $$ \left[ \frac{l+r}{2} \right] = -1 $$ 死循环
 
 **c++整除向0取整**
