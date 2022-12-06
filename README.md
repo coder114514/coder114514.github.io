@@ -1,5 +1,8 @@
 # 个人网站
 
+## 小游戏
+1. [tetris和hatetris (C++)](https://github.com/coder114514/tetris)
+
 ## 目录
 
 1. [memset和整数数据范围 2022/11/22](posts/memset.md)
