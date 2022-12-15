@@ -10,3 +10,4 @@
 1. [Dijkstra最短路算法 2022/11/22](posts/Dijkstra.md)
 1. [一个线段树技巧 2022/11/22](posts/segtree.md)
 1. [NOIP2022游寄 2022/12/6](posts/NOIP2022.md)
+1. [洛谷 P1654 OSU 2022/12/15](posts/lgP1654OSU.md)
