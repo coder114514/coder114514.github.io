@@ -5,9 +5,10 @@
 
 ## 目录
 
-1. [memset和整数数据范围 2022/11/22](posts/memset.md)
-1. [Floyd和倍增Floyd 2022/11/22](posts/Floyd.md)
-1. [Dijkstra最短路算法 2022/11/22](posts/Dijkstra.md)
-1. [一个线段树技巧 2022/11/22](posts/segtree.md)
-1. [NOIP2022游寄 2022/12/6](posts/NOIP2022.md)
-1. [洛谷 P1654 OSU 2022/12/15](posts/lgP1654OSU.md)
+1. [2022/11/22 memset和整数数据范围](posts/memset.md)
+1. [2022/11/22 Floyd和倍增Floyd](posts/Floyd.md)
+1. [2022/11/22 Dijkstra最短路算法](posts/Dijkstra.md)
+1. [2022/11/22 一个线段树技巧](posts/segtree.md)
+1. [2022/12/06 NOIP2022游寄](posts/NOIP2022.md)
+1. [2022/12/15 洛谷 P1654 OSU](posts/lgP1654OSU.md)
+1. [2022/12/20 OSU 拓展](posts/OSUex.md)
