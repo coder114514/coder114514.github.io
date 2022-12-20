@@ -10,6 +10,7 @@ B 君并不喜欢 OSU，但是 B 君觉得 OSU 这个题不错。
 ```
 
 ## 为什么能这么做，为什么会和第二类斯特林数有关系？？
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -50,4 +51,5 @@ int main() {
 	}
 	printf("%lld\n", z);
 	return 0;
-}```
+}
+```
