@@ -1,7 +1,8 @@
 # 个人网站
 
-## 小游戏
+## 程序
 1. [tetris和hatetris (C++)](https://github.com/coder114514/tetris)
+1. [ASCII Rick Roll (C++)](https://github.com/coder114514/ASCII_Rick_Roll)
 
 ## 目录
 
