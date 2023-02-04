@@ -3,6 +3,7 @@
 ## 程序
 1. [tetris和hatetris (C++)](https://github.com/coder114514/tetris)
 1. [ASCII Rick Roll (C++)](https://github.com/coder114514/ASCII_Rick_Roll)
+1. [对拍程序 (C++)](https://github.com/coder114514/DuiPai)
 
 ## 目录
 
