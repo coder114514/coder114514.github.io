@@ -20,3 +20,4 @@
 1. [2023/01/08 树状数组的正确性的证明](posts/20230108_bit.md)
 1. [2023/01/08 Euler's method的误差分析](posts/20230108_euler.md)
 1. [2023/01/17 再看 OSU 拓展](posts/20230117_OSUex.md)
+1. [2023/02/05 写数学公式太难受了](posts/20230205_nasty_math_formula.md)
