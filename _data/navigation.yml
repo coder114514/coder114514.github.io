@@ -1,0 +1,7 @@
+main:
+  - title: "回到主页面"
+    url: /
+  - title: "永硕E盘"
+    url: http://coder114514.ysepan.com
+  - title: "site map"
+    url: /sitemap.xml
