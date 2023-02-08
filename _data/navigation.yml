@@ -5,3 +5,7 @@ main:
     url: http://coder114514.ysepan.com
   - title: "site map"
     url: /sitemap.xml
+  - title: "FEED"
+    url: /feed.xml
+  - title: "GitHub"
+    url: https://www.github.com/coder114514

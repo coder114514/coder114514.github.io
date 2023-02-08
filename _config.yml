@@ -8,3 +8,4 @@ plugins:
 - jekyll-remote-theme
 - jekyll-include-cache
 - jekyll-sitemap
+- jekyll-feed
