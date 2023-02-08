@@ -17,6 +17,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-last-modified-at
 
 defaults:
   # _posts
