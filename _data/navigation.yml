@@ -3,8 +3,6 @@ main:
     url: /
   - title: "永硕E盘"
     url: http://coder114514.ysepan.com
-  - title: "site map"
-    url: /sitemap.xml
   - title: "FEED"
     url: /feed.xml
   - title: "GitHub"
