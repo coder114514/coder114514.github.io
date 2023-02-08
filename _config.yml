@@ -4,8 +4,17 @@ locale: "zh-CN"
 lang: zh-CN,en-US
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: dark
+
 plugins:
-- jekyll-remote-theme
-- jekyll-include-cache
-- jekyll-sitemap
-- jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-feed
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
