@@ -17,7 +17,6 @@ plugins:
   - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-archives
 
 defaults:
   # _posts
