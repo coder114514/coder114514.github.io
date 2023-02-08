@@ -4,7 +4,9 @@ layout: posts
 tags: OI notes
 ---
 
-这篇文章会不定期更新。这篇文章的目的在于记录对网络流直观的理解，而不在乎它形式化的严格定义和对定理的严格验证。
+这篇文章会不定期更新。
+
+这篇文章的目的在于记录对网络流直观的理解，而不在乎它形式化的严格定义和对定理的严格验证。
 
 oi-wiki上有更详细的讲解。
 
@@ -12,13 +14,13 @@ oi-wiki上有更详细的讲解。
 
 1. 容量网络（capacity network）：一个有向图，上面每条边的权值代表这条边的容量
 
-![容量网络](https://cloudimge.com/image/nXbyz)
+![容量网络](https://c2.im5i.com/2023/02/08/nXbyz.png)
 
 2. 流量网络（flow network）：加了流量的网络，x/y表示流量/容量
 
-![流量网络](https://cloudimge.com/image/nXu76)
+![流量网络](https://c2.im5i.com/2023/02/08/nXu76.png)
 
-![一个流](https://cloudimge.com/image/nXHP8)
+![一个流](https://c2.im5i.com/2023/02/08/nXHP8.png)
 
 流量表示从源点到终点沿着一条路径“流过了多少东西”，它不能超过每条边的容量，流量可以叠加，所有流的和就是总流量
 
