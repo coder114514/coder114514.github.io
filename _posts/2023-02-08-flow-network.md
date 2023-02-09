@@ -33,7 +33,7 @@ tags: OI notes
 
 ### 残量网络（residual network）：$G$中所有结点和剩余容量大于 $0$ 的边构成的子图，一般记作 $G_f$
 
-即 $G_f=(V,E_f)$，其中 $E_f=\{(u,v)|c_f(u,v)>0\}$，$c_f(u,v)$是剩余流量（Residual Capacity），$c_f(u,v)=c(u,v)-f(u,v)$
+即 $G_f=(V,E_f)$，其中 $E_f=\\{(u,v)|c_f(u,v)>0\\}$，$c_f(u,v)$是剩余流量（Residual Capacity），$c_f(u,v)=c(u,v)-f(u,v)$
 
 （请忽略下图中为0的边）
 
