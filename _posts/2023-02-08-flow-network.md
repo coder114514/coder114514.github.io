@@ -27,7 +27,7 @@ tags: OI notes
 它要满足如下三个性质：
 1. 容量限制：对于所有$(u,v)\in E$，$f(u,v) \le c(u,v)$
 2. 斜对称性（skew symmetry）：$f(u,v)=-f(v,u)$
-3. 流守恒性：流入一个点的流量等于流出这个点的流量，即对于所有$u \in V-\{s,t\}$，$\sum\limits_{(v,u) \in E}{f(v,u)}=\sum\limits_{(u,v) \in E}{f(u,v)}$
+3. 流守恒性：流入一个点的流量等于流出这个点的流量，即对于所有$u \in V-\\{s,t\\}$，$\sum\limits_{(v,u) \in E}{f(v,u)}=\sum\limits_{(u,v) \in E}{f(u,v)}$
 
 流的大小是 $v(f)=\sum\limits_{(s,v)\in E}{f(s,v)}$
 
