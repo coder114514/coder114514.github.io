@@ -31,7 +31,7 @@ tags: OI notes
 
 规定如果$(u,v) \notin E$且$(v,u) \notin E$，那么$f(u,v)=f(v,u)=0$
 
-流的大小是 $v(f)=\sum\limits_{(s,v)\in E}{f(s,v)}$
+流的大小是 $v(f)=\sum\limits_{(s,v)\in E}{f(s,v)}$，即从起点出发的总流量，也等于到终点的总流量
 
 ### 残量网络（residual network）：$G$中所有结点和剩余容量大于 $0$ 的边构成的子图，一般记作 $G_f$
 
@@ -121,7 +121,7 @@ int EK() {
 
 割的大小$v(S,T)$就是所有$S$到$T$的边（也就是这个边的起点在$S$中，终点在$T$中）的权值的总和
 
-对于任意的割$(S,T)$和流$f$，$v(f)=S到T的总流量-T到S的总流量$
+首先有一个性质，对于任意的割$(S,T)$和流$f$，$v(f)=S到T的总流量-T到S的总流量$
 
 证明：$v(f)=\sum\limits_{u \in S}{(\sum\limits_{(u,v) \in E}{f(u,v)}-\sum\limits_{(v,u) \in E}{f(v,u)})}$ 然后考虑每条边的贡献就可以得证
 
