@@ -128,6 +128,58 @@ int EK() {
 
 dfs多路探索的时候我们要应用当前弧加速，当前弧加速就是说，因为我们可以提前知道哪些路径走下去肯定到不了终点，我们就可以提前决定不去走它们
 
+```cpp
+int S, T;
+int lv[N];
+int cur[N]; //这个就是当前弧加速
+
+bool bfs() {
+    memset(lv, 0, sizeof(lv));
+    queue<int> q;
+    q.push(S);
+    lv[S] = 1;
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop();
+        for (int i = hd[u]; i; i = e[i].nxt) {
+            int c = e[i].c;
+            if (!c) continue;
+            int v = e[i].to;
+            if (lv[v]) continue;
+            q.push(v);
+            lv[v] = lv[u] + 1;
+        }
+    }
+    return lv[T];
+}
+
+int dfs(int u, int f) {
+    if (u == T) return f;
+    int sum = 0;
+    for (int i = cur[u]; i && f; i = e[i].nxt) {
+        cur[u] = i; //这条边所有的流量已经被用掉了，后面再来这个结点的时候不需要再走这条边了
+        int v = e[i].to;
+        int c = e[i].c;
+        if (lv[v] != lv[u] + 1 || !c) continue; //这条边其实不在层次图里面
+        int delta = dfs(v, min(f, c)); //这是多路探索，就是不需要每次都从源点开始找增广路径
+        sum += delta;
+        f -= delta;
+        e[i].c -= delta;
+        e[i ^ 1].c += delta;
+    }
+    return sum;
+}
+
+int Dinic() {
+    int maxFlow = 0;
+    while (bfs()) {
+        for (int i = 1; i <= n; i++) cur[i] = hd[i]; //每次dfs前要重置这个
+        maxFlow += dfs(S, INF);
+    }
+    return maxFlow;
+}
+```
+
 ## 最小割
 割就是把所有节点划分到两个集合中，然后起点和终点不在同一个集合，一般把包含起点$s$的集合叫做$S$，包含终点的集合$t$叫做$T$
 
