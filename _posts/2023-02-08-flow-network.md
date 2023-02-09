@@ -29,6 +29,8 @@ tags: OI notes
 2. 斜对称性（skew symmetry）：$f(u,v)=-f(v,u)$
 3. 流守恒性：流入一个点的流量等于流出这个点的流量，即对于所有$u \in V-\\{s,t\\}$，$\sum\limits_{(v,u) \in E}{f(v,u)}=\sum\limits_{(u,v) \in E}{f(u,v)}$
 
+规定如果$(u,v) \notin E$且$(v,u) \notin E$，那么$f(u,v)=f(v,u)=0$
+
 流的大小是 $v(f)=\sum\limits_{(s,v)\in E}{f(s,v)}$
 
 ### 残量网络（residual network）：$G$中所有结点和剩余容量大于 $0$ 的边构成的子图，一般记作 $G_f$
