@@ -51,7 +51,11 @@ Ford-Fulkerson Killer（如果每次dfs运气不好都过中间那条边的话�
 
 2. Edmond-Karp~~动能算法~~: 每次通过bfs找一条增广路径
 
+找到的增广路径叫做最短步数增广路(SAP, Shortest Augmenting Path)
+
 复杂度更好一点：$\mathcal{O}(|V||E|^2)$
+
+实际效果: 1秒可以处理上万个节点的稀疏图
 
 这个复杂度网上的伪证比较多，oi-wiki上有一个[严格的证明](https://oi-wiki.org/graph/flow/max-flow/#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90)
 
