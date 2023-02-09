@@ -54,7 +54,7 @@ tags: OI notes
 ### 算法：
 #### Ford-Fulkerson: 每次通过dfs找一条增广路径
 
-复杂度: $\mathcal{O}(|E||f|)$
+复杂度: $\mathcal{O}(|E||f|)$ 其中$f$是最大流
 
 是最简单的最大流算法，但是复杂度很差，在有些图上运行时间会和容量成正比
 
@@ -65,15 +65,52 @@ Ford-Fulkerson Killer（如果每次dfs运气不好都过中间那条边的话�
 
 找到的增广路径叫做最短步数增广路(SAP, Shortest Augmenting Path)
 
-复杂度更好一点：$\mathcal{O}(|V||E|^2)$
+复杂度：$\mathcal{O}(|V||E|^2)$ [证明](https://oi-wiki.org/graph/flow/max-flow/#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90)
 
 实际效果: 1秒可以处理上万个节点的稀疏图
 
-这个复杂度网上的伪证比较多，oi-wiki上有一个[严格的证明](https://oi-wiki.org/graph/flow/max-flow/#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90)
+##### 代码
+```cpp
+int pre[NV], flow[NV];
+
+bool bfs() {
+    queue<int> q;
+    memset(pre, 0, sizeof(pre));
+    pre[S] = -1;
+    flow[S] = INF;
+    q.push(S);
+    while (!q.empty()) {
+        int u = q.front(); q.pop();
+        for (int i = hd[u]; i; i = e[i].nxt) {
+            int c = e[i].c;
+            if (!c) continue;
+            int v = e[i].to;
+            if (pre[v]) continue;
+            q.push(v);
+            pre[v] = i;
+            flow[v] = min(flow[u],c);
+            if (v == T) return true;
+        }
+    }
+    return false;
+}
+
+int EK() {
+    int maxFlow = 0;
+    while (bfs()) {
+        maxFlow += flow[T];
+        for(int u = T; u; u = e[pre[u]^1].to){
+            e[pre[u]].c -= flow[T];
+            e[pre[u]^1].c += flow[T];
+        }
+    }
+    return maxFlow;
+}
+```
 
 #### Dinic: bfs+dfs每次尝试寻找多条增广路径
 
-复杂度：$\mathcal{O}(|V|^2|E|)$
+复杂度：$\mathcal{O}(|V|^2|E|)$ [证明](https://oi-wiki.org/graph/flow/max-flow/#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90_1)
 
 实际效果: 1秒可以处理上万个节点的稀疏图，复杂度往往比上面的好，所以不能通过将$V$$E$代入$|V|^2|E|$来估计算法复杂度
 
