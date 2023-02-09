@@ -1,5 +1,5 @@
 ---
-title: 关于网络流
+title: 网络流
 layout: posts
 tags: OI notes
 ---
@@ -69,7 +69,11 @@ Ford-Fulkerson Killer（如果每次dfs运气不好都过中间那条边的话�
 
 这个复杂度网上的伪证比较多，oi-wiki上有一个[严格的证明](https://oi-wiki.org/graph/flow/max-flow/#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90)
 
-#### Dinic: 每次寻找多条增广路径
+#### Dinic: bfs+dfs每次尝试寻找多条增广路径
+
+复杂度：$\mathcal{O}(|V|^2|E|)$
+
+实际效果: 1秒可以处理上万个节点的稀疏图，复杂度往往比上面的好，所以不能通过将$V$$E$代入$|V|^2|E|$来估计算法复杂度
 
 <待更新>
 
