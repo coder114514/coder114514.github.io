@@ -1,8 +1,6 @@
 main:
   - title: "主页"
     url: /
-  - title: "永硕E盘"
-    url: http://coder114514.ysepan.com
   - title: "FEED"
     url: /feed.xml
   - title: "GitHub"
