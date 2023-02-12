@@ -1,5 +1,5 @@
 main:
-  - title: "主页"
+  - title: "首页"
     url: /
   - title: "FEED"
     url: /feed.xml
