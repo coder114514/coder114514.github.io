@@ -1,0 +1,35 @@
+---
+title: 变质量系统中力与动量的关系
+layout: posts
+tags: notes physics
+---
+
+由牛顿第二定律可以得出$m$不变时 $$\vec{F}=m\vec{a}=m\frac{d\vec{v}}{dt}=\frac{d\vec{p}}{dt}$$
+
+那么在$m$会变时还是这样的吗？
+
+实际上$m$会变时方程时这样的：$$\vec{F}=\frac{d\vec{p}}{dt}-\vec{u}\frac{dm}{dt}$$
+
+其中$\vec{u}$是指$t$时刻时，增加的质量$dm$速度从$\vec{u}$变成$\vec{v}$，或者减少的质量$-dm$速度从$\vec{v}$变成$\vec{u}$
+
+##### 证明
+
+在$t$到$t+dt$的时候，$$\vec{F}dt=\vec{f_{dm}}dt+\vec{f_{m}}dt=(\vec{v}-\vec{u})dm+md\vec{v}=d(m\vec{v})-\vec{u}dm$$
+
+再将$dt$除到右边即可得到上述方程
+
+##### 例子：火箭方程
+
+一个真空中的火箭以相对自身的速度$u$向反方向喷射气体，那么我们可以得到如下方程
+
+$$0=\frac{dp}{dt}-(v-u)\frac{dm}{dt}$$
+
+$$\frac{dm}{dt}v+\frac{dv}{dt}m=(v-u)\frac{dm}{dt}$$
+
+$$\frac{dv}{dt}m=-u\frac{dm}{dt}$$
+
+$$\frac{dv}{dt}=-u\frac{d(\ln{m})}{dt}$$
+
+$$dv=d(-u\ln{m})$$
+
+$$\Delta v=u\ln{m_初}-u\ln{m_末}=u\ln{\frac{m_初}{m_末}}$$
