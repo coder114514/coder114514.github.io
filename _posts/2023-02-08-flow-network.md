@@ -1,5 +1,5 @@
 ---
-title: 网络流入门
+title: 网络流
 layout: posts
 tags: OI notes
 ---
