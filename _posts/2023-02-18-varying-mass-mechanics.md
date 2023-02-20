@@ -8,7 +8,7 @@ tags: notes physics
 
 那么在$m$会变时还是这样的吗？
 
-实际上$m$会变时方程时这样的：$$\vec{F}=\frac{d\vec{p}}{dt}-\vec{u}\frac{dm}{dt}$$
+实际上$m$会变时方程是这样的：$$\vec{F}=\frac{d\vec{p}}{dt}-\vec{u}\frac{dm}{dt}$$
 
 其中$\vec{u}$是指$t$时刻时，增加的质量$dm$速度从$\vec{u}$变成$\vec{v}$，或者减少的质量$-dm$速度从$\vec{v}$变成$\vec{u}$
 
