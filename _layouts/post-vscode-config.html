@@ -1,35 +1,90 @@
 ---
-layout: archive-no-mathjax
 ---
 
-<script src="https://gist.github.com/coder114514/17ae32f754658e2e5a25584cb5877eeb.js"></script>
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+  </head>
 
-<script src="https://gist.github.com/coder114514/6f941aaa7e2f4706b7820ba28f656d4c.js"></script>
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+    {% include_cached skip-links.html %}
+    {% include_cached masthead.html %}
 
-{% include tags.html %}
-{% include comment.html %}
+<div class="initial-content">
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+{% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+{% include page__hero_video.html %}
+{% endif %}
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}  
+  <div id="main" role="main">
+    {% include sidebar.html %}
+    <div class="archive">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+      {% endunless %}
 
-<ul class="taxonomy__index">
-  {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-  {% for year in postsInYear %}
-    <li>
-      <a href="#{{ year.name }}">
-        <strong>{{ year.name }}</strong> <span class="taxonomy__count">{{ year.items | size }}</span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+      <script src="https://gist.github.com/coder114514/17ae32f754658e2e5a25584cb5877eeb.js"></script>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-{% for year in postsByYear %}
-  <section id="{{ year.name }}" class="taxonomy__section">
-    <h2 class="archive__subtitle">{{ year.name }}</h2>
-    <div class="entries-{{ entries_layout }}">
-      {% for post in year.items %}
-        {% include archive-single.html type=entries_layout %}
+      <script src="https://gist.github.com/coder114514/6f941aaa7e2f4706b7820ba28f656d4c.js"></script>
+      
+      {% include tags.html %}
+      {% include comment.html %}
+      
+      <ul class="taxonomy__index">
+        {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+        {% for year in postsInYear %}
+          <li>
+            <a href="#{{ year.name }}">
+              <strong>{{ year.name }}</strong> <span class="taxonomy__count">{{ year.items | size }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      
+      {% assign entries_layout = page.entries_layout | default: 'list' %}
+      {% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+      {% for year in postsByYear %}
+        <section id="{{ year.name }}" class="taxonomy__section">
+          <h2 class="archive__subtitle">{{ year.name }}</h2>
+          <div class="entries-{{ entries_layout }}">
+            {% for post in year.items %}
+              {% include archive-single.html type=entries_layout %}
+            {% endfor %}
+          </div>
+          <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+        </section>
       {% endfor %}
+
     </div>
-    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-  </section>
-{% endfor %}
+  </div>
+</div>
+
+{% if site.search == true %}
+  <div class="search-content">
+    {% include_cached search/search_form.html %}
+  </div>
+{% endif %}
+
+    <div id="footer" class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>
