@@ -16,11 +16,11 @@ tags: OI notes
 
 否则$c(u,v)=0$
 
-![容量网络](https://c2.im5i.com/2023/02/08/nXbyz.png)
+![容量网络](https://c.1ovv.com/2023/03/20/nnMUj.png)
 
 ### 流量网络（flow network）：加了流量的网络，x/y表示流量/容量
 
-![流量网络](https://c2.im5i.com/2023/02/08/nXu76.png)
+![流量网络](https://c.1ovv.com/2023/03/20/nnOiS.png)
 
 流量$f$也是$V \times V -> R$的映射
 
@@ -31,15 +31,13 @@ tags: OI notes
 
 规定如果$(u,v) \notin E$且$(v,u) \notin E$，那么$f(u,v)=f(v,u)=0$
 
-流的大小是 $v(f)=\sum\limits_{(s,v)\in E}{f(s,v)}$，即从起点出发的总流量，也等于到终点的总流量
+流的大小是 $v(f)=\sum\limits_{(s,v)\in E}{f(s,v)}$，即从起点出发的总流量，容易证明它也等于到终点的总流量
 
-### 残量网络（residual network）：$G$中所有结点和剩余容量大于 $0$ 的边构成的子图，一般记作 $G_f$
+### 残量网络（residual network）：$G$中所有结点和剩余容量大于 $0$ 的边和反向边构成的图，一般记作 $G_f$
 
-即 $G_f=(V,E_f)$，其中 $E_f=\\{(u,v)|c_f(u,v)>0\\}$，$c_f(u,v)$是剩余流量（Residual Capacity），$c_f(u,v)=c(u,v)-f(u,v)$
+形式化地，$G_f=(V,E_f)$，其中 $E_f=\\{(u,v)|c_f(u,v)>0\\}$，其中 $ c_f(u,v)=c(u,v)-f(u,v) $ 即剩余流量（Residual Capacity）
 
-（请忽略下图中为0的边）
-
-![残量网络](https://c2.im5i.com/2023/02/08/nXAbL.png)
+![残量网络](https://c.1ovv.com/2023/03/20/no1FL.png)
 
 ## 最大流
 
@@ -47,7 +45,7 @@ tags: OI notes
 
 增广路径就是残量网络上从源点到汇点的一条路径
 
-![增广路径](https://c2.im5i.com/2023/02/08/nXLmt.png)
+![增广路径](https://c.1ovv.com/2023/03/20/noFyt.png)
 
 不停地找增广路径（然后在残量图上修改相应的流量）直到没有任何增广路径，我们就可以得到最大流（正确性可以从下面关于最大流最小割定理的论证得出，就是这样找的的流的大小和一个相应的割的大小相等）
 
@@ -61,7 +59,7 @@ tags: OI notes
 是最简单的最大流算法，但是复杂度很差，在有些图上运行时间会和容量成正比
 
 Ford-Fulkerson Killer（如果每次dfs运气不好都过中间那条边的话，算法就至少要找200次增广路了）:
-![Ford-Fulkerson Killer](https://c2.im5i.com/2023/02/08/nXzhq.png)
+![Ford-Fulkerson Killer](https://c.1ovv.com/2023/03/20/noQYq.png)
 
 #### Edmond-Karp~~动能算法~~: 每次通过bfs找一条增广路径
 
@@ -120,11 +118,12 @@ int EK() {
 
 注意：当前弧加速是必须要有的，它是用于保证时间复杂度正确性的一部分，而多路探索是常数优化
 
-定义$d(u)$为从源点bfs到u的轮数+1，然后根据$d(u)$对残量图进行分层
+设$d(u)$为从源点bfs到u的轮数+1，然后根据$d(u)$对残量图进行分层得到层次图
 
-定义$G_L=(V,E_L)$为$G_f$的层次图，$E_L=\\{(u,v)|(u,v)\in E_f, d(v)=d(u)+1\\}$
+形式化地，定义$G_L=(V,E_L)$为$G_f$的层次图，$E_L=\\{(u,v)|(u,v)\in E_f, d(v)=d(u)+1\\}$
 
-![层次图](https://c2.im5i.com/2023/02/10/noUQZ.png)
+![层次图](https://c.1ovv.com/2023/03/20/nohpm.png)
+(黑边残量图，红边层次图)
 
 每轮bfs求出$G_L$后在它上面dfs多路探索得到它上最大的流，然后修改残量图并给答案加上这个流
 
@@ -211,10 +210,10 @@ int Dinic() {
 1. 二分图最大匹配
 
 比如对于这个二分图
-![二分图](https://c2.im5i.com/2023/02/08/nXpV3.png)
+![二分图](https://c.1ovv.com/2023/03/20/noCPs.png)
 
 这么建图，然后再上面跑一遍最大流就可以得到最大匹配了（下图中每条边的边权都是1，反向边省略）
-![二分图最大匹配](https://c2.im5i.com/2023/02/08/nX7Wy.png)
+![二分图最大匹配](https://c.1ovv.com/2023/03/20/noqTQ.png)
 
 2. 对“二选一”类型的问题建模
 
@@ -246,6 +245,10 @@ int Dinic() {
 
 从中取出若干数，使得任意两个取出的数所在格子没有公共边，且取出的数的总和尽量大。
 
+输入：
+
+第一行是n，接下来n行是n\*n方阵
+
 #### 解法
 因为最大总和等于所有数的和减掉最小的不选的总和
 
@@ -253,11 +256,11 @@ int Dinic() {
 
 首先把格子按行号与列号的和的奇偶性分类
 
-![](https://c2.im5i.com/2023/02/12/nAK4Z.png)
+![](https://c.1ovv.com/2023/03/20/nove3.png)
 
 从源点向偶格子连边，权值为格子中的值；从奇格子向汇点连边，权值为格子中的值；从偶格子向它周围的四个奇格子连边，权值为$+\infty$
 
-![](https://c2.im5i.com/2023/02/09/nYaCR.png)
+![](https://c.1ovv.com/2023/03/20/noN6y.png)
 
 ##### 按照集合划分理解
 
