@@ -4,6 +4,8 @@ layout: post-vscode-config
 tags: vscode
 ---
 
+ConsolePauser.exe 可以在我的永硕E盘下载(电脑软件\\ConsolePauser.exe)
+
 ##### 拓展
 - Github Theme
 - Material Icon Theme
@@ -18,3 +20,5 @@ tags: vscode
 - Pylance
 - Python
 - vscode-pdf
+
+Updated on 2023/3/24
