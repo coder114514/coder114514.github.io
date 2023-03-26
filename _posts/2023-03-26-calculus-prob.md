@@ -12,9 +12,9 @@ tags: math notes
 
 $$
 \begin{aligned}
-原式&=\lim_{n \to \infty}{\sqrt{n}(\sum_{i=1}^{n}{\frac{\sqrt{i}}{n^2+n\sqrt{i}}})} 说明：1拆成n个1/n各自相减得到\\
-&=\lim_{n \to \infty}{\sqrt{n}(\sum_{i=1}^{n}{\frac{i^{\frac{1}{2}}}{n^2}})} 说明：n趋于无穷，n^2增长快过n\sqrt{i}\\
-&=\lim_{n \to \infty}{n^{\frac{1}{2}}{\frac{\frac{2}{3}n^{\frac{3}{2}}}{n^2}}} 说明：n趋于无穷，求和相当于积分\\
+原式&=\lim_{n \to \infty}{\sqrt{n}(\sum_{i=1}^{n}{\frac{\sqrt{i}}{n^2+n\sqrt{i}}})} 说明：1拆成n个1/n各自相减得到\\\\
+&=\lim_{n \to \infty}{\sqrt{n}(\sum_{i=1}^{n}{\frac{i^{\frac{1}{2}}}{n^2}})} 说明：n趋于无穷，n^2增长快过n\sqrt{i}\\\\
+&=\lim_{n \to \infty}{n^{\frac{1}{2}}{\frac{\frac{2}{3}n^{\frac{3}{2}}}{n^2}}} 说明：n趋于无穷，求和相当于积分\\\\
 &=\frac{2}{3}
 \end{aligned}
 $$
