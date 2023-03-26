@@ -6,7 +6,7 @@ tags: math notes
 
 ![](https://c.1ovv.com/2023/03/24/n8jkU.jpeg)
 
-相当于在近似y=1/x在n到2n的曲线下方面积, 所以结果是 $\ln{2n}-\ln{n}=\ln{2}$
+相当于在近似$y=\frac{1}{x}$在$n$到$2n$的曲线下方面积, 所以结果是 $\ln{2n}-\ln{n}=\ln{2}$
 
 ![](https://c.1ovv.com/2023/03/24/n8H38.jpeg)
 
