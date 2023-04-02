@@ -4,21 +4,15 @@ layout: post-vscode-config
 tags: vscode
 ---
 
-ConsolePauser.exe 可以在[我的永硕E盘](http://coder114514.ysepan.com)下载(电脑软件\\ConsolePauser.exe)
+ConsolePauser.exe 可以在[我的永硕E盘](http://coder114514.ysepan.com)下载(电脑软件\\ConsolePauser.exe)或者从Dev C++里找出来
 
-##### 拓展
+##### 推荐OI类拓展
 - Github Theme
 - Material Icon Theme
 - Competitive Programming Helper (cph)
 - TabOut
-- Project Manager
 - C/C++
 - Code Runner
 - Error Lens
-- Hex Editor
-- Markdown Preview Github Styling
-- Pylance
-- Python
-- vscode-pdf
 
-Updated on 2023/3/24
+Updated on 2023/4/2

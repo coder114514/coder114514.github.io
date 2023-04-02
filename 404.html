@@ -6,7 +6,7 @@ permalink: /404.html
 layout: archive
 ---
 
-<h3 class="archive__subtitle"><a href="/tags">所有标签</a></h3>
+<h3 class="archive__subtitle"><a href="/tags.html">所有标签</a></h3>
 
 <ul class="taxonomy__index">
     {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
