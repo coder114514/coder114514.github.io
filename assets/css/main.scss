@@ -1,13 +1,21 @@
-html {
-    /* Selected elements */
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
 
-    ::-moz-selection {
-    color: #fff;
-    background: #3399FF;
-    }
+@charset "utf-8";
 
-    ::selection {
-    color: #fff;
-    background: #3399FF;
-    }
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Selected elements */
+
+::-moz-selection {
+color: #fff;
+background: #3399FF;
+}
+
+::selection {
+color: #fff;
+background: #3399FF;
 }
