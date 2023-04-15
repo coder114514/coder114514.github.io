@@ -32,3 +32,15 @@ search: true
 category_archive:
   type: liquid
   path: /categories/
+
+repository: coder114514/coder114514.github.io
+
+omments:
+  provider: "giscus"
+  giscus:
+    repo_id              : R_kgDOIao9sQ
+    category_name        : Comments
+    category_id          : DIC_kwDOIao9sc4CUCOU
+    discussion_term      : og:title
+    reactions_enabled    : 1
+    theme                : dark
