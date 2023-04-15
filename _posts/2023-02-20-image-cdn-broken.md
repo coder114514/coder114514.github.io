@@ -1,7 +1,7 @@
 ---
 title: 图床炸了
 layout: posts
-tags: rant
+category: rant
 ---
 
 [云图床](https://cloudimge.com/)好像在进行维护工作，虽然上面说“请过几分钟回来”，但是它已经维护了好几天了...

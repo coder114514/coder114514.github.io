@@ -1,7 +1,7 @@
 ---
 title: 网络流入门
 layout: posts
-tags: 算法笔记
+category: 算法笔记
 ---
 
 ## 什么是网络流
