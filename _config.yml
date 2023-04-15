@@ -8,7 +8,7 @@ lang: zh-CN,en-US
 
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-minimal_mistakes_skin: dark
+minimal_mistakes_skin: neon
 
 date_format: "%Y/%m/%d"
 
