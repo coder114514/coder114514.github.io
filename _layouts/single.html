@@ -62,6 +62,7 @@ layout: default
 
       {% include post_pagination.html %}
     </div>
+    {% include comment.html %}
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
@@ -88,7 +89,4 @@ layout: default
       </div>
     </div>
   {% endif %}
-  <div class="page__inner-warp">
-    {% include comment.html %}
-  </div>
 </div>
