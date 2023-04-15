@@ -8,7 +8,7 @@
         {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
         <time datetime="{{ date | date_to_xmlschema }}">Created: {{ date | date: date_format }}</time>
         {% if page.last_modified_at %}
-        <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">Updated: {{ page.last_modified_at | date: date_format }}</time>
+        <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">Updated: {{ page.last_modified_at | date: date_format }}</time>
         {% endif %}
       </span>
     {% endif %}
