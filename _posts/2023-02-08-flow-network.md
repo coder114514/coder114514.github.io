@@ -1,6 +1,5 @@
 ---
 title: 网络流入门
-layout: posts
 category: 算法笔记
 ---
 

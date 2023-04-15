@@ -1,6 +1,5 @@
 ---
 title: 写数学公式太难受了
-layout: posts
 category: rant
 ---
 

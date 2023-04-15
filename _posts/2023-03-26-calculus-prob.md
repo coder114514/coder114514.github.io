@@ -1,10 +1,7 @@
 ---
 title: 两道有意思的微积分题目
-layout: posts
 category: 数学
 ---
-
-_Updated on 2023/4/15_
 
 ![](https://c.1ovv.com/2023/03/24/n8jkU.jpeg)
 

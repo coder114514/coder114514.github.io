@@ -1,6 +1,6 @@
 ---
 title: 图床炸了
-layout: posts
+
 category: rant
 ---
 

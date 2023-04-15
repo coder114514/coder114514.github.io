@@ -4,8 +4,6 @@ layout: post-vscode-config
 category: 配置
 ---
 
-_Updated on 2023/4/2_
-
 ##### 推荐OI类拓展
 - Github Theme
 - Material Icon Theme

@@ -1,6 +1,6 @@
 ---
 title: 变质量系统中力与动量的关系
-layout: posts
+
 category: 物理笔记
 ---
 
