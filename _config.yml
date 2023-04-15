@@ -25,3 +25,9 @@ defaults:
       type: posts
     values:
       show_date: true
+
+search: true
+
+category_archive:
+  type: liquid
+  path: /categories/
