@@ -26,6 +26,7 @@ defaults:
     values:
       layout: single
       show_date: true
+      classes: wide
 
 search: true
 
