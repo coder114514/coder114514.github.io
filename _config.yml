@@ -18,10 +18,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
-category_archive:
-  type: liquid
-  path: /categories/
-
 defaults:
   # _posts
   - scope:
