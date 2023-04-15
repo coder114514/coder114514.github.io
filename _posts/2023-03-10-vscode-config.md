@@ -2,17 +2,17 @@
 title: VSCode 配置
 layout: post-vscode-config
 category: 配置
-last_modified_at: 2023/04/02
+last_modified_at: 2023/04/15
 ---
 
 ##### 推荐OI类拓展
-- Github Theme
-- Material Icon Theme
-- Competitive Programming Helper (cph)
-- TabOut
-- C/C++
-- Code Runner
-- Error Lens
+1. Github Theme
+1. Material Icon Theme
+1. Competitive Programming Helper (cph)
+1. TabOut
+1. C/C++
+1. Code Runner
+1. Error Lens
 
 - - -
 以下是配置文件
