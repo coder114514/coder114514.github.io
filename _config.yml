@@ -35,7 +35,7 @@ category_archive:
 
 repository: coder114514/coder114514.github.io
 
-omments:
+comments:
   provider: "giscus"
   giscus:
     repo_id              : R_kgDOIao9sQ
