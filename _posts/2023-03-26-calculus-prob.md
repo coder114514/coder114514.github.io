@@ -1,6 +1,7 @@
 ---
 title: 两道有意思的微积分题目
 category: 数学
+last_modified_at: 2023/04/15
 ---
 
 ![](https://c.1ovv.com/2023/03/24/n8jkU.jpeg)
