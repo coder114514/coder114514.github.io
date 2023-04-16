@@ -15,17 +15,18 @@ layout: archive
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+{% assign posts = site.posts %}
+{% assign postsUpdated = posts | where_exp:"item","item.last_modified_at" %}
+{% assign postsUpdatedSorted = postsUpdated | sort: "last_modified_at" | reverse %}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
+  {% for post in postsUpdatedSorted %}
     {% include archive-single.html type=entries_layout %}
   {% endfor %}
+  {% for post in posts %}
+    {% unless postsUpdated contains post %}
+      {% include archive-single.html type=entries_layout %}
+    {% endunless %}
+  {% endfor %}
 </div>
-
-{% include paginator.html %}
