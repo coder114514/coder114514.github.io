@@ -1,7 +1,7 @@
 ---
 title: 变质量系统中力与动量的关系
-
 category: 物理笔记
+last_modified_at: 2023/02/18
 ---
 
 由牛顿第二定律可以得出$m$不变时 $$\vec{F}=m\vec{a}=m\frac{d\vec{v}}{dt}=\frac{d\vec{p}}{dt}$$
