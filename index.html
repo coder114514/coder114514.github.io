@@ -16,6 +16,7 @@ layout: archive
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% assign posts = site.posts %}
+{% assign posts.a "a" %}
 {% assign postsUpdated = posts | where_exp:"item","item.last_modified_at" %}
 {% assign postsUpdatedSorted = postsUpdated | sort: "last_modified_at" | reverse %}
 
