@@ -29,7 +29,3 @@ defaults:
       classes: wide
 
 search: true
-
-category_archive:
-  type: liquid
-  path: /categories/
