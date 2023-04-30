@@ -1,7 +1,7 @@
 ---
 title: VSCode 配置
 layout: post-vscode-config
-category: 配置
+tags: 配置
 last_modified_at: 2023/04/15
 ---
 

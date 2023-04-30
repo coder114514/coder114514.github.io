@@ -1,6 +1,6 @@
 ---
 title: 集合DP
-category: 算法笔记
+tags: 算法笔记
 last_modified_at: 2023/04/17
 ---
 

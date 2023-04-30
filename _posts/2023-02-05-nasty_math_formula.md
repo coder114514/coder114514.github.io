@@ -1,6 +1,6 @@
 ---
 title: 写数学公式太难受了
-category: rant
+tags: rant
 last_modified_at: 2023/04/15
 ---
 

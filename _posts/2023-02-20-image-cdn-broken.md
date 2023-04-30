@@ -1,6 +1,6 @@
 ---
 title: 图床炸了
-category: rant
+tags: rant
 last_modified_at: 2023/02/20
 ---
 
