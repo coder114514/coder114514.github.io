@@ -17,3 +17,33 @@ devcpp:
     url: /2023/04/17/devcpp.html#astyle
   - title: 美化 Dev C++
     url: /2023/04/17/devcpp.html#dev-c
+
+flow_network_beginner:
+  - title: 基础概念
+    children:
+      - title: 什么是网络流
+        url: /2023/02/08/flow-network.html#section
+      - title: 什么是容量网络
+        url: /2023/02/08/flow-network.html#capacity-network
+      - title: 什么是流量网络
+        url: /2023/02/08/flow-network.html#flow-networkxy
+      - title: 什么是残量网络
+        url: /2023/02/08/flow-network.html#residual-networkg-0--gf
+  - title: 最大流
+    children:
+      - title: 定义
+        url: /2023/02/08/flow-network.html#section-1
+      - title: 算法与代码
+        url: /2023/02/08/flow-network.html#section-2
+  - title: 最小割
+    children:
+      - title: 定义与最大流最小割定理
+        url: /2023/02/08/flow-network.html#section-4
+  - title: 应用
+    url: /2023/02/08/flow-network.html#section-5
+  - title: 例题
+    children:
+      - title: 一
+        url: /2023/02/08/flow-network.html#section-7
+      - title: 二
+        url: /2023/02/08/flow-network.html#section-9

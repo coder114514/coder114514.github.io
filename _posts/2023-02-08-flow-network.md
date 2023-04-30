@@ -2,6 +2,8 @@
 title: 网络流入门
 tags: 算法笔记
 last_modified_at: 2023/02/08
+sidebar:
+  nav: "flow_network_beginner"
 ---
 
 ## 什么是网络流
