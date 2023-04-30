@@ -12,8 +12,8 @@ main:
 
 devcpp:
   - title: 翻新编译器
-    url: /配置/2023/04/17/devcpp.html#section
+    url: /2023/04/17/devcpp.html#section
   - title: 让Astyle能工作
-    url: /配置/2023/04/17/devcpp.html#astyle
+    url: /2023/04/17/devcpp.html#astyle
   - title: 美化 Dev C++
-    url: /配置/2023/04/17/devcpp.html#dev-c
+    url: /2023/04/17/devcpp.html#dev-c

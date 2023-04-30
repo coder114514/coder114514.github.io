@@ -32,8 +32,8 @@ search: true
 
 category_archive:
   type: liquid
-  path: /by_categories
+  path: /by_categories.html
 
 tag_archive:
   type: liquid
-  path: /by_tags
+  path: /by_tags.html
