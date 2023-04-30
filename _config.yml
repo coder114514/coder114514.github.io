@@ -33,3 +33,7 @@ search: true
 category_archive:
   type: liquid
   path: /by_categories
+
+tag_archive:
+  type: liquid
+  path: /by_tags
