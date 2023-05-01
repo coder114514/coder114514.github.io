@@ -34,7 +34,6 @@ flow_network_beginner:
       - title: 定义
         url: /2023/02/08/flow-network.html#section-1
       - title: 算法与代码
-        url: /2023/02/08/flow-network.html#section-2
         children:
           - title: Ford Fulkerson
             url: /2023/02/08/flow-network.html#ford-fulkerson-dfs
