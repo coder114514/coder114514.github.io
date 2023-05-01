@@ -33,14 +33,12 @@ flow_network_beginner:
     children:
       - title: 定义
         url: /2023/02/08/flow-network.html#section-1
-      - title: 算法与代码
-        children:
-          - title: Ford Fulkerson
-            url: /2023/02/08/flow-network.html#ford-fulkerson-dfs
-          - title: Edmond Karp
-            url: /2023/02/08/flow-network.html#edmond-karpdeldel-bfs
-          - title: Dinic
-            url: /2023/02/08/flow-network.html#dinic-bfsdfs
+      - title: Ford Fulkerson
+        url: /2023/02/08/flow-network.html#ford-fulkerson-dfs
+      - title: Edmond Karp
+        url: /2023/02/08/flow-network.html#edmond-karpdeldel-bfs
+      - title: Dinic
+        url: /2023/02/08/flow-network.html#dinic-bfsdfs
   - title: 最小割
     children:
       - title: 定义与最大流最小割定理
