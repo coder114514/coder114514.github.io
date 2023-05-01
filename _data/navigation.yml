@@ -40,10 +40,14 @@ flow_network_beginner:
       - title: 定义与最大流最小割定理
         url: /2023/02/08/flow-network.html#section-4
   - title: 应用
-    url: /2023/02/08/flow-network.html#section-5
+    children:
+      - title: 1
+        url: /2023/02/08/flow-network.html#section-6
+      - title: 2
+        url: /2023/02/08/flow-network.html#section-7
   - title: 例题
     children:
       - title: 一
-        url: /2023/02/08/flow-network.html#section-7
-      - title: 二
         url: /2023/02/08/flow-network.html#section-9
+      - title: 二
+        url: /2023/02/08/flow-network.html#section-11
