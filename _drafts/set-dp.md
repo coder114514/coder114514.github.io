@@ -1,6 +1,7 @@
 ---
 title: 集合DP
-tags: 算法笔记
+category: OI笔记
+tags: OI OI笔记
 last_modified_at: 2023/04/17
 ---
 
