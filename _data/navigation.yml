@@ -1,8 +1,6 @@
 main:
   - title: "首页"
     url: /
-  - title: "FEED"
-    url: /feed.xml
   - title: "GitHub"
     url: https://www.github.com/coder114514/coder114514.github.io
   - title: "图床"
