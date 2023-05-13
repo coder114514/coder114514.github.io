@@ -1,7 +1,7 @@
 ---
 title: 网络流入门
 
-tags: OI OI笔记
+tags: OI笔记
 last_modified_at: 2023/05/01
 sidebar:
   nav: "flow_network_beginner"
