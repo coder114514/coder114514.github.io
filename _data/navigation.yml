@@ -39,8 +39,10 @@ flow_network_beginner:
         url: /2023/02/08/flow-network.html#dinic-bfsdfs
   - title: 最小割
     children:
-      - title: 定义与最大流最小割定理
+      - title: 定义
         url: /2023/02/08/flow-network.html#section-4
+      - title: 最大流最小割定理
+        url: /2023/02/08/flow-network.html#section-5
   - title: 应用
     children:
       - title: 1
