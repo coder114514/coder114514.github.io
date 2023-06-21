@@ -21,11 +21,11 @@ sidebar:
 
 否则 $c(u,v)=0$
 
-![容量网络](https://c.1ovv.com/2023/03/20/nnMUj.png)
+![容量网络](/images/flow/cap.png)
 
 ### 流量网络（flow network）：加了流量的网络，x/y表示流量/容量
 
-![流量网络](https://c.1ovv.com/2023/03/20/nnOiS.png)
+![流量网络](/images/flow/flow.png)
 
 流量 $f$ 也是$V\times V\rightarrow R$的映射
 
@@ -44,7 +44,7 @@ sidebar:
 
 形式化地，$G_f=(V,E_f)$，其中 $E_f=\\{(u,v)|c_f(u,v)>0\\}$，其中 $ c_f(u,v)=c(u,v)-f(u,v) $ 即剩余流量（residual capacity）
 
-![残量网络](https://c.1ovv.com/2023/03/20/no1FL.png)
+![残量网络](/images/flow/res.png)
 
 ## 最大流
 
@@ -52,7 +52,7 @@ sidebar:
 
 增广路径就是残量网络上从源点到汇点的一条路径
 
-![增广路径](https://c.1ovv.com/2023/03/20/noFyt.png)
+![增广路径](/images/flow/aug.png)
 
 不停地找增广路径（然后在残量图上修改相应的流量）直到没有任何增广路径，我们就可以得到最大流（正确性可以从下面关于最大流最小割定理的论证得出，就是这样找的的流的大小和一个相应的割的大小相等）
 
@@ -66,7 +66,7 @@ sidebar:
 是最简单的最大流算法，但是复杂度很差，在有些图上运行时间会和容量成正比
 
 Ford-Fulkerson Killer（如果每次dfs运气不好都过中间那条边的话，算法就至少要找200次增广路了）:
-![Ford-Fulkerson Killer](https://c.1ovv.com/2023/03/20/noQYq.png)
+![Ford-Fulkerson Killer](/images/flow/ffkill.png)
 
 #### Edmond-Karp~~动能算法~~: 每次通过bfs找一条增广路径
 
@@ -129,7 +129,7 @@ int EK() {
 
 形式化地，定义$G_L=(V,E_L)$为$G_f$的层次图，$E_L=\\{(u,v)|(u,v)\in E_f, d(v)=d(u)+1\\}$
 
-![层次图](https://c.1ovv.com/2023/03/20/nohpm.png)
+![层次图](/images/flow/lvl.png)
 (黑边残量图，红边层次图)
 
 每轮bfs求出$G_L$后在它上面dfs多路探索得到它上最大的流，然后修改残量图并给答案加上这个流
@@ -225,10 +225,10 @@ Q.E.D
 ### 1. 二分图最大匹配
 
 比如对于这个二分图
-![二分图](https://c.1ovv.com/2023/03/20/noCPs.png)
+![二分图](/images/flow/bin.png)
 
 这么建图，然后再上面跑一遍最大流就可以得到最大匹配了（下图中每条边的边权都是1，反向边省略）
-![二分图最大匹配](https://c.1ovv.com/2023/03/20/noqTQ.png)
+![二分图最大匹配](/images/flow/binflow.png)
 
 ### 2. 对“二选一”类型的问题建模
 
@@ -271,11 +271,11 @@ Q.E.D
 
 首先把格子按行号与列号的和的奇偶性分类
 
-![](https://c.1ovv.com/2023/03/20/nove3.png)
+![](/images/flow/board.png)
 
 从源点向偶格子连边，权值为格子中的值；从奇格子向汇点连边，权值为格子中的值；从偶格子向它周围的四个奇格子连边，权值为$+\infty$
 
-![](https://c.1ovv.com/2023/03/20/noN6y.png)
+![](/images/flow/boardnet.png)
 
 ##### 按照集合划分理解
 
@@ -291,7 +291,7 @@ Q.E.D
 
 求出最小割，就是最小的不选的总和了
 
-##### 按照割边来理解：
+##### 按照割边来理解
 
 首先无限大的边肯定不能割，而如果我割左边一条边（图中橙边），那么就表示我不要奇格子，然后右边连接着的偶格子就有保留的机会了
 
