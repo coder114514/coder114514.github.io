@@ -2,16 +2,14 @@
 title: 网络流入门
 
 tags: OI笔记
-last_modified_at: 2023/06/17
+last_modified_at: 2023/06/22
 sidebar:
   nav: "flow_network_beginner"
 ---
 
 ## 什么是网络流
 
-首先，网络（flow network）是指一个有向图 $G=(V,E)$，其中有两个特殊点源点（source）$s \in V$ 和汇点（sink）$t \in V$，（$s \neq t$）
-
-为了方便，我们令网络中只存在单向边，即若 $(u,v)\in E$ 则 $(v,u)\notin E$
+首先，网络（flow network）是指一个有向图 $G=(V,E)$，其中有两个特殊点: 源点（source）$s \in V$ 和汇点（sink）$t \in V$（$s \neq t$）
 
 ### 容量网络（capacity network）：加了容量的网络，上面每条边的权值等于这条边的容量
 
@@ -32,17 +30,28 @@ sidebar:
 它要满足如下三个性质：
 1. 容量限制：$f(u,v) \le c(u,v)$
 2. 斜对称性（skew symmetry）：$f(u,v)=-f(v,u)$
-3. 流守恒性：流入一个点的流量等于流出这个点的流量，即对于所有$u \in V-\\{s,t\\}$，$\sum\limits_{(v,u) \in E}{f(v,u)}=\sum\limits_{(u,v) \in E}{f(u,v)}$
+3. 流守恒性：流入一个点的流量等于流出这个点的流量 $\forall u \in V-\\{s,t\\},\sum\limits_{v \in V}{f(u,v)}=0$
 
-注意到如果 $(u,v) \notin E$ 且 $(v,u) \notin E$，那么 $f(u,v)=f(v,u)=0$
+注意到由1和2:
 
-而如果 $(u,v)\in E$ 且 $(v,u)\notin E$，那么 $f(u,v)\ge0,f(v,u)\le0$
+1. $(u,v) \notin E \and (v,u) \notin E \implies f(u,v)=f(v,u)=0$
+2. $f(u,u)=0$
 
-流的大小是 $v(f)=\sum\limits_{(s,v)\in E}{f(s,v)}$，即从起点出发的总流量，容易证明它也等于到终点的总流量
+流的大小定义为 $v(f)=\sum\limits_{v\in V}{f(s,v)}$
+
+为了便于讨论，定义符号$F(S,T)=\sum\limits_{u\in S}\sum\limits_{v\in T}f(u,v)$
+
+那么显然有:
+
+1. $F(S,T)=-F(T,S)$
+2. $F(A\cup B,C)=F(A,C)+F(B,C)-F(A\cap B,C)$ 第二个参数也是同理
+3. $s\notin S\and t\notin S\implies F(S,V)=F(V,S)=0$
+
+由此可以推出 $|f|=F(s,V)=F(V,V)-F(V-s,V)=-F(V-s,V)=F(V,V-s)=F(V,V-s-t)+F(V,t)=F(V,t)$
 
 ### 残量网络（residual network）：$G$中所有结点和剩余容量大于 $0$ 的边和反向边构成的图，一般记作 $G_f$
 
-形式化地，$G_f=(V,E_f)$，其中 $E_f=\\{(u,v)|c_f(u,v)>0\\}$，其中 $ c_f(u,v)=c(u,v)-f(u,v) $ 即剩余流量（residual capacity）
+形式化地，$G_f=(V,E_f)$，其中 $E_f=\\{(u,v)|c_f(u,v)>0\\,u\in V,v\in V}$，其中 $ c_f(u,v)=c(u,v)-f(u,v) $ 即剩余流量（residual capacity）
 
 ![残量网络](/images/flow/res.png)
 
@@ -54,7 +63,7 @@ sidebar:
 
 ![增广路径](/images/flow/aug.png)
 
-不停地找增广路径（然后在残量图上修改相应的流量）直到没有任何增广路径，我们就可以得到最大流（正确性可以从下面关于最大流最小割定理的论证得出，就是这样找的的流的大小和一个相应的割的大小相等）
+不停地找增广路径（然后在残量图上修改相应的流量）直到没有任何增广路径，我们就可以得到最大流 - 这就是增广路定理（之后会论证这个定理）
 
 实际上流的斜对称性就是用来“退流”的，比如我们之前选的流不够好，它就能撤销掉之前的流
 
@@ -74,7 +83,7 @@ Ford-Fulkerson Killer（如果每次dfs运气不好都过中间那条边的话�
 
 复杂度：$\mathcal{O}(|V||E|^2)$ [证明](https://oi-wiki.org/graph/flow/max-flow/#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90)
 
-实际效果: 1秒可以处理上万个节点的稀疏图
+实际效果: 1秒可以处理上万个节点的稀疏图，通常运行速度达不到这个上界这么慢
 
 ##### 代码
 ```cpp
@@ -119,7 +128,7 @@ int EK() {
 
 复杂度：$\mathcal{O}(|V|^2|E|)$ [证明](https://oi-wiki.org/graph/flow/max-flow/#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90_1)
 
-实际效果: 1秒可以处理上万个节点的稀疏图，复杂度往往比上面的好，所以不能通过将$V$$E$代入$|V|^2|E|$来估计算法复杂度
+实际效果: 1秒可以处理上万个节点的稀疏图，复杂度往往达不到这个上界，所以不能通过将$|V|$,$|E|$代入$|V|^2|E|$来估计算法复杂度
 
 使用bfs分层+dfs多路探索以及当前弧加速（current-arc acceleration）
 
@@ -189,35 +198,29 @@ int Dinic() {
 ```
 
 ## 最小割
-割就是把所有节点划分到两个集合中，然后起点和终点不在同一个集合，一般把包含起点$s$的集合叫做$S$，包含终点$t$的集合叫做$T$
+一个割$(S,T)$就是满足$s\in S\and t\in T$的对$V$的划分
 
-割的大小 $v(S,T)=\sum\limits_{(u,v)\in E,u\in S,v\in T}{c(u,v)}$
+割的大小定义为 $v(S,T)=\sum\limits_{u\in S}\sum\limits_{v\in T}c(u,v)$，最小割定义为大小最小的割
 
-最小割另一个等价的定义是删边使源点到汇点不再连通的最小的删去的边的权值和（等价是因为最小割肯定是分为$s$可达点和$s$不可达点的割）
+最小割另一个等价的定义是最小的通过删边使源点到汇点不再连通的删去的边的权值和（等价是因为最小割肯定是分为$s$可达点和$s$不可达点的割）
 
-引理：对于任意的割$(S,T)$和流$f$，$v(f)=\sum\limits_{(u,v)\in E,u\in S,v\in T}{f(u,v)}-\sum\limits_{(u,v)\in E,u\in T,v\in S}{f(u,v)}$
+引理：对于任意的割$(S,T)$和流$f$，$|f|=F(S,T)$
 
-证明：由流的守恒性 $v(f)=\sum\limits_{u \in S}{(\sum\limits_{(u,v) \in E}{f(u,v)}-\sum\limits_{(v,u) \in E}{f(v,u)})}$ 然后考虑每条边的贡献就可以得证
+证明：$|f|=F(s,V)=F(s,V)+F(S-s,V)=F(S,V)=F(S,T)+F(S,S)=F(S,T)$
 
 ## 最大流最小割定理
 
 即最大流等于最小割
 
-证明：由上面的引理容易得到对任意的流和割，$v(f) \le v(S,T)$ （之前我们已经规定了图中只存在单向边，所以式子中的 $f$ 都是非负的）
+证明：由上面的引理容易得到对任意的流和割，$|f|\le v(S,T)$
 
-那么如果存在一个流和一个割满足 $v(f) = v(S,T)$ 就可以证明该定理（若这个 $f$ 不是最大流，显然会产生矛盾）
+那么如果存在一个流和一个割满足 $|f| = v(S,T)$ 就可以证明该定理（若这个 $f$ 不是最大流，显然会产生矛盾）
 
 假设我们根据之前的 Ford-Fulkerson 算法找到了一个流（当然还不知道是最大流），那残量网络中肯定没有从$s$到$t$的路径（算法终止条件），于是我们可以把点划分为$s$可达的$S$和$s$不可达的$T$，得到一个割 $(S,T)$。
 
-考虑所有 $(u,v)\in E,u\in S, v\in T$
+对于所有满足$u\in S,v\in T$的点对$(u,v)$，由于残量图中$s$可以达到$u$，但不能达到$v$，所以$c_f(u,v)\le0\implies f(u,v)\ge c(u,v)$，然而$f(u,v)\le c(u,v)$，所以$f(u,v)=c(u,v)$
 
-由于残量网络中$s$可达$u$不可达$v$，所以 $c_f(u,v)=0$，于是 $c(u,v)=f(u,v)-c_f(u,v)=f(u,v)$
-
-考虑所有 $(u,v)\in E,u\in T, v\in S$，那么 $c(v,u)=0$
-
-由于残量网络中$s$可达$v$不可达$u$，所以 $c_f(v,u)=0$，于是 $f(u,v)=-f(v,u)=-c(v,u)+c_f(v,u)=0$
-
-由引理可得，$v(f)=v(S,T)$
+由引理可得，$|f|=v(S,T)$
 
 Q.E.D
 
