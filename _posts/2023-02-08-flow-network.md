@@ -74,7 +74,7 @@ sidebar:
 
 是最简单的最大流算法，但是复杂度很差，在有些图上运行时间会和容量成正比
 
-Ford-Fulkerson Killer（如果每次dfs运气不好都过中间那条边的话，算法就至少要找200次增广路了）:
+Ford-Fulkerson Killer（如果每次dfs运气不好都过中间那条边的话，算法就要找200次增广路了）
 ![Ford-Fulkerson Killer](/images/flow/ffkill.png)
 
 #### Edmond-Karp~~动能算法~~: 每次通过bfs找一条增广路径
@@ -198,7 +198,7 @@ int Dinic() {
 ```
 
 ## 最小割
-一个割$(S,T)$就是满足$s\in S\and t\in T$的对$V$的划分
+一个割$(S,T)$就是满足$s\in S\wedge t\in T$的对$V$的划分
 
 割的大小定义为 $v(S,T)=\sum\limits_{u\in S}\sum\limits_{v\in T}c(u,v)$，最小割定义为大小最小的割
 
@@ -228,9 +228,11 @@ Q.E.D
 ### 1. 二分图最大匹配
 
 比如对于这个二分图
+
 ![二分图](/images/flow/bin.png)
 
 这么建图，然后再上面跑一遍最大流就可以得到最大匹配了（下图中每条边的边权都是1，反向边省略）
+
 ![二分图最大匹配](/images/flow/binflow.png)
 
 ### 2. 对“二选一”类型的问题建模
