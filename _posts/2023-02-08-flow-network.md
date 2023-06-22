@@ -34,7 +34,7 @@ sidebar:
 
 注意到由1和2:
 
-1. $(u,v) \notin E \and (v,u) \notin E \implies f(u,v)=f(v,u)=0$
+1. $(u,v) \notin E \wedge(v,u) \notin E \implies f(u,v)=f(v,u)=0$
 2. $f(u,u)=0$
 
 流的大小定义为 $v(f)=\sum\limits_{v\in V}{f(s,v)}$
@@ -45,13 +45,13 @@ sidebar:
 
 1. $F(S,T)=-F(T,S)$
 2. $F(A\cup B,C)=F(A,C)+F(B,C)-F(A\cap B,C)$ 第二个参数也是同理
-3. $s\notin S\and t\notin S\implies F(S,V)=F(V,S)=0$
+3. $s\notin S\wedge t\notin S\implies F(S,V)=F(V,S)=0$
 
 由此可以推出 $|f|=F(s,V)=F(V,V)-F(V-s,V)=-F(V-s,V)=F(V,V-s)=F(V,V-s-t)+F(V,t)=F(V,t)$
 
 ### 残量网络（residual network）：$G$中所有结点和剩余容量大于 $0$ 的边和反向边构成的图，一般记作 $G_f$
 
-形式化地，$G_f=(V,E_f)$，其中 $E_f=\\{(u,v)|c_f(u,v)>0\\,u\in V,v\in V}$，其中 $ c_f(u,v)=c(u,v)-f(u,v) $ 即剩余流量（residual capacity）
+形式化地，$G_f=(V,E_f)$，其中 $E_f=\\{(u,v)|c_f(u,v)>0\\,u\in V,v\in V\\}$，其中 $ c_f(u,v)=c(u,v)-f(u,v) $ 即剩余流量（residual capacity）
 
 ![残量网络](/images/flow/res.png)
 
