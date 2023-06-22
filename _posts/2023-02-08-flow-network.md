@@ -51,7 +51,7 @@ sidebar:
 
 ### 残量网络（residual network）：$G$中所有结点和剩余容量大于 $0$ 的边和反向边构成的图，一般记作 $G_f$
 
-形式化地，$G_f=(V,E_f)$，其中 $E_f=\\{(u,v)|c_f(u,v)>0\\,u\in V,v\in V\\}$，其中 $ c_f(u,v)=c(u,v)-f(u,v) $ 即剩余流量（residual capacity）
+形式化地，$G_f=(V,E_f)$，其中 $E_f=\\{(u,v)|c_f(u,v)>0,u\in V,v\in V\\}$，其中 $ c_f(u,v)=c(u,v)-f(u,v) $ 即剩余流量（residual capacity）
 
 ![残量网络](/images/flow/res.png)
 
