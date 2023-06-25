@@ -2,10 +2,12 @@
 title: 网络流入门
 
 tags: OI笔记
-last_modified_at: 2023/06/22
+last_modified_at: 2023/06/25
 sidebar:
   nav: "flow_network_beginner"
 ---
+
+注：本文只考虑整数容量、整数流，但一部分论证可以直接推广到非整数流的问题上
 
 ## 什么是网络流
 
