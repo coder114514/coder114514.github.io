@@ -27,8 +27,8 @@ $a_{n+1}=\frac{ka_n+t}{sa_n+p}$，其中对于所有 $n\in\mathbb{N^+}$，$sa_n+
 求不动点
 $$
 \begin{aligned}
-x&=\frac{kx+t}{sx+p}\\
-&\iff \frac{sx^2+(p-k)x-t}{sx+p}=0\\
+x&=\frac{kx+t}{sx+p}\\\\
+&\iff \frac{sx^2+(p-k)x-t}{sx+p}=0\\\\
 &\iff sx^2+(p-k)x-t=0&&\text{不会有增根，因为}pk\neq st
 \end{aligned}
 $$
@@ -37,8 +37,8 @@ $$
 式子两端减去一个不动点 $x_f$
 $$
 \begin{aligned}
-a_{n+1}-x_f&=\frac{ka_n+t}{sa_n+p}-\frac{kx_f+t}{sx_f+p}\\
-&=\frac{(ka_n+t)(sx_f+p)-(kx_f+t)(sa_n+p)}{(sa_n+p)(sx_f+p)}\\
+a_{n+1}-x_f&=\frac{ka_n+t}{sa_n+p}-\frac{kx_f+t}{sx_f+p}\\\\
+&=\frac{(ka_n+t)(sx_f+p)-(kx_f+t)(sa_n+p)}{(sa_n+p)(sx_f+p)}\\\\
 &=\frac{(pk-st)(a_n-x_f)}{(sx_f+p)(sa_n+p)}
 \end{aligned}
 $$
@@ -46,7 +46,7 @@ $$
 
 如果有两个不动点，记为 $x_1,x_2$，那么有
 $$
-a_{n+1}-x_1=\frac{(pk-st)(a_n-x_1)}{(sx_1+p)(sa_n+p)}\\
+a_{n+1}-x_1=\frac{(pk-st)(a_n-x_1)}{(sx_1+p)(sa_n+p)}\\\\
 a_{n+1}-x_2=\frac{(pk-st)(a_n-x_2)}{(sx_2+p)(sa_n+p)}
 $$
 做商(假设$a_n$不是常数列，那么两式都不为0)
@@ -61,7 +61,7 @@ $$
 
 $$
 \begin{aligned}
-a_1&=2\\
+a_1&=2\\\\
 a_{n+1}&=\frac{1}{2}(a_n+\frac{2}{a_n})
 \end{aligned}
 $$
@@ -72,8 +72,8 @@ $$
 
 式子两端各自减去两个不动点，然后再做商可得
 $$
-\frac{a_{n+1}+\sqrt{2}}{a_{n+1}-\sqrt{2}}=(\frac{a_n+\sqrt{2}}{a_n-\sqrt{2}})^2\\
-\frac{a_n+\sqrt{2}}{a_n-\sqrt{2}}=(1+\sqrt{2})^{2^n}\\
+\frac{a_{n+1}+\sqrt{2}}{a_{n+1}-\sqrt{2}}=(\frac{a_n+\sqrt{2}}{a_n-\sqrt{2}})^2\\\\
+\frac{a_n+\sqrt{2}}{a_n-\sqrt{2}}=(1+\sqrt{2})^{2^n}\\\\
 a_n=\frac{(1+\sqrt{2})^{2^n}+1}{(1+\sqrt{2})^{2^n}-1}\sqrt{2}
 $$
 
