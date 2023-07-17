@@ -46,8 +46,10 @@ $$
 
 如果有两个不动点，记为 $x_1,x_2$，那么有
 $$
-a_{n+1}-x_1=\frac{(pk-st)(a_n-x_1)}{(sx_1+p)(sa_n+p)}\\\\
-a_{n+1}-x_2=\frac{(pk-st)(a_n-x_2)}{(sx_2+p)(sa_n+p)}
+\begin{aligned}
+a_{n+1}-x_1&=\frac{(pk-st)(a_n-x_1)}{(sx_1+p)(sa_n+p)}\\\\
+a_{n+1}-x_2&=\frac{(pk-st)(a_n-x_2)}{(sx_2+p)(sa_n+p)}
+\end{aligned}
 $$
 做商(假设$a_n$不是常数列，那么两式都不为0)
 $$
@@ -72,9 +74,11 @@ $$
 
 式子两端各自减去两个不动点，然后再做商可得
 $$
-\frac{a_{n+1}+\sqrt{2}}{a_{n+1}-\sqrt{2}}=(\frac{a_n+\sqrt{2}}{a_n-\sqrt{2}})^2\\\\
-\frac{a_n+\sqrt{2}}{a_n-\sqrt{2}}=(1+\sqrt{2})^{2^n}\\\\
-a_n=\frac{(1+\sqrt{2})^{2^n}+1}{(1+\sqrt{2})^{2^n}-1}\sqrt{2}
+\begin{aligned}
+\frac{a_{n+1}+\sqrt{2}}{a_{n+1}-\sqrt{2}}&=(\frac{a_n+\sqrt{2}}{a_n-\sqrt{2}})^2\\\\
+\frac{a_n+\sqrt{2}}{a_n-\sqrt{2}}&=(1+\sqrt{2})^{2^n}\\\\
+a_n&=\frac{(1+\sqrt{2})^{2^n}+1}{(1+\sqrt{2})^{2^n}-1}\sqrt{2}
+\end{aligned}
 $$
 
 
