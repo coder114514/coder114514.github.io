@@ -1,6 +1,8 @@
 main:
   - title: "首页"
     url: /
+  - title: "Obsidian"
+    url: /obsidian/blog/目录.html
   - title: "GitHub"
     url: https://www.github.com/coder114514/coder114514.github.io
   - title: "永硕E盘"
