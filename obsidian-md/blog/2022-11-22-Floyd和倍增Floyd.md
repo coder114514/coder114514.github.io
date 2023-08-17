@@ -88,6 +88,3 @@ for (int p = 0; (1<<p) <= nStep; p++) { // 和快速幂一样
     memcpy(G, F, sizeof(F));
 }
 ```
-
-标签：
-#OI笔记  #OI #CS
