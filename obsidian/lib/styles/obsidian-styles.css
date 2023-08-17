@@ -2786,5 +2786,3 @@ body.is-tablet .mobile-navbar { display: none; }
 input.mobile-vault-chooser-field-input { width: 100%; font-size: var(--font-ui-medium); padding: 8px 12px; height: auto; }
 .mobile-vault-chooser-button-container { margin: 20px 0px; }
 .mobile-vault-chooser-button-container button { padding: 10px 20px; font-size: var(--font-ui-medium); width: 100%; }
-
-.nav-files-container.svelte-1xm87ro { height: 100%; }
