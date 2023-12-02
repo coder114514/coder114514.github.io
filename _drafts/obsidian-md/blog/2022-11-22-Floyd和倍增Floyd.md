@@ -9,7 +9,7 @@
 初始状态
 $$
 \begin{cases}
-f_{0,i,i}=0\
+f_{0,i,i}=0\\
 f_{0,i,j}=w&如果i到j有一条权值为w的边（重边就选最小的）\\
 f_{0,i,j}=+\infty&如果i到j没有边
 \end{cases}
