@@ -10,48 +10,48 @@ main:
 
 devcpp:
   - title: 翻新编译器
-    url: /2023/04/17/devcpp.html#section
+    url: /old_blogs/2023/04/17/devcpp.html#section
   - title: 让Astyle能工作
-    url: /2023/04/17/devcpp.html#astyle
+    url: /old_blogs/2023/04/17/devcpp.html#astyle
   - title: 美化 Dev C++
-    url: /2023/04/17/devcpp.html#dev-c
+    url: /old_blogs/2023/04/17/devcpp.html#dev-c
 
 flow_network_beginner:
   - title: 基础概念
     children:
       - title: 什么是网络流
-        url: /2023/02/08/flow-network.html#section
+        url: /old_blogs/old_blogs/2023/02/08/flow-network.html#section
       - title: 什么是容量网络
-        url: /2023/02/08/flow-network.html#capacity-network
+        url: /old_blogs/2023/02/08/flow-network.html#capacity-network
       - title: 什么是流量网络
-        url: /2023/02/08/flow-network.html#flow-networkxy
+        url: /old_blogs/2023/02/08/flow-network.html#flow-networkxy
       - title: 什么是残量网络
-        url: /2023/02/08/flow-network.html#residual-networkg-0--gf
+        url: /old_blogs/2023/02/08/flow-network.html#residual-networkg-0--gf
   - title: 最大流
     children:
       - title: 定义
-        url: /2023/02/08/flow-network.html#section-1
+        url: /old_blogs/2023/02/08/flow-network.html#section-1
       - title: Ford Fulkerson
-        url: /2023/02/08/flow-network.html#ford-fulkerson-dfs
+        url: /old_blogs/2023/02/08/flow-network.html#ford-fulkerson-dfs
       - title: Edmond Karp
-        url: /2023/02/08/flow-network.html#edmond-karpdeldel-bfs
+        url: /old_blogs/2023/02/08/flow-network.html#edmond-karpdeldel-bfs
       - title: Dinic
-        url: /2023/02/08/flow-network.html#dinic-bfsdfs
+        url: /old_blogs/2023/02/08/flow-network.html#dinic-bfsdfs
   - title: 最小割
     children:
       - title: 定义
-        url: /2023/02/08/flow-network.html#section-4
+        url: /old_blogs/2023/02/08/flow-network.html#section-4
       - title: 最大流最小割定理
-        url: /2023/02/08/flow-network.html#section-5
+        url: /old_blogs/2023/02/08/flow-network.html#section-5
   - title: 应用
     children:
       - title: 1
-        url: /2023/02/08/flow-network.html#section-6
+        url: /old_blogs/2023/02/08/flow-network.html#section-6
       - title: 2
-        url: /2023/02/08/flow-network.html#section-7
+        url: /old_blogs/2023/02/08/flow-network.html#section-7
   - title: 例题
     children:
       - title: 一
-        url: /2023/02/08/flow-network.html#section-9
+        url: /old_blogs/2023/02/08/flow-network.html#section-9
       - title: 二
-        url: /2023/02/08/flow-network.html#section-11
+        url: /old_blogs/2023/02/08/flow-network.html#section-11

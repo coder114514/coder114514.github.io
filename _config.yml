@@ -10,6 +10,8 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 date_format: "%Y/%m/%d"
 
+permalink: /old_blogs/:year/:month/:day/:title:output_ext
+
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
@@ -27,10 +29,6 @@ defaults:
       classes: wide
 
 search: true
-
-category_archive:
-  type: liquid
-  path: /by_categories.html
 
 tag_archive:
   type: liquid
