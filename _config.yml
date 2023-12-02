@@ -1,6 +1,6 @@
 markdown: GFM
 
-title: coder114514的博客
+title: coder114514的个人网站
 
 locale: "zh-CN"
 
@@ -32,4 +32,4 @@ search: true
 
 tag_archive:
   type: liquid
-  path: /by_tags.html
+  path: /old_blogs/by_tags.html

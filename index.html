@@ -2,17 +2,8 @@
 layout: archive
 ---
 
-<h3 class="archive__subtitle"><a href="/index_by_update_time.html">按更新时间排序</a></h3>
-<h3 class="archive__subtitle"><a href="/by_years.html">按年份归档</a></h3>
-<h3 class="archive__subtitle"><a href="/by_tags.html">按标签归档</a></h3>
-
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-
-{% assign posts = site.posts %}
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
-</div>
+<h2 class="archive__subtitle">链接</h3>
+<h3><a href="/obsidian/blog/0000-00-00-目录.html">博客</a></h3>
+<h3><a href="/old_blogs/">旧博客</a></h3>
+<h3><a href="https://github.com/coder114514/coder114514.github.io">GitHub</a></h3>
+<h3><a href="http://coder114514.ysepan.com/">永硕E盘</a></h3>
