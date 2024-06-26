@@ -7,3 +7,5 @@
 7. 树的重心，直径....
 8. cdq 证明它的有效性，以及讨论递归顺序与计算顺序的关系
 9. Dilworth定理
+10. fix Obsidian problems
+11. sync github pages with obsidian
